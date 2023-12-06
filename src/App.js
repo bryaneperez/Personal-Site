@@ -10,16 +10,11 @@ function App() {
   return (
     <div className="App">
       <Router basename='/'>
-       <div>
-        <ul>
-          <li><Link to= "/">Home</Link></li>
-          <li><Link to= "/projects">Projects</Link></li>
-          <li><Link to="/experience">Experience</Link></li>
-        </ul>
-        <Route exact path="/" component= {Home} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/experience" component={Experience} />
-       </div>
+        <Routes>
+          <Route path ="/" element = {<Home/>} />
+          <Route path ="/projects" element = {<Projects/>} />
+          <Route path ="/experience" element = {<Experience/>} />
+        </Routes>
       </Router>
     </div>
   );
